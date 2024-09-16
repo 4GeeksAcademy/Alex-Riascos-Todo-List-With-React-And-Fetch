@@ -14,12 +14,12 @@ const TodoList = () => {
         if (response.ok) {
             const data = await response.json();
             setTaskList(data.todos);
-            setErrorMessage(""); // Limpiar mensaje de error si la carga es exitosa
-            return true; // Indica que la carga fue exitosa
+            setErrorMessage("");
+            return true;
         } else {
-            setTaskList([]); // Limpiar la lista de tareas si el usuario no existe
-            setErrorMessage("El nombre de usuario no existe."); // Establecer mensaje de error
-            return false; // Indica que la carga falló
+            setTaskList([]);
+            setErrorMessage("El nombre de usuario no existe.");
+            return false;
         }
     };
 
@@ -64,9 +64,9 @@ const TodoList = () => {
 
     const handleUserSubmit = async () => {
         if (userName.trim() !== "") {
-            const isValidUser = await loadTask(); // Cargar tareas para verificar si el usuario existe
+            const isValidUser = await loadTask();
             if (isValidUser) {
-                setIsUserSet(true); // Solo establecer el usuario si hay tareas
+                setIsUserSet(true);
             }
         }
     };
@@ -93,7 +93,7 @@ const TodoList = () => {
                     >
                         Set Username
                     </button>
-                    {errorMessage && <p className="text-danger">{errorMessage}</p>} {/* Mostrar mensaje de error */}
+                    {errorMessage && <p className="text-danger">{errorMessage}</p>}
                 </div>
             ) : (
                 <div>
