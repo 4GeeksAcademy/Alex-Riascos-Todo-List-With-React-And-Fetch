@@ -1,12 +1,29 @@
+.container {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
 
-/* 
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #ffffff;
 
-*/
+}
+
+#app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text-pink {
+    color: #d35b97;
+}
